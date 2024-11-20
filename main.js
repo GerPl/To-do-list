@@ -60,7 +60,7 @@ addForm.addEventListener('submit', (e) =>{
         })
         const sortSelect = document.getElementById('options')
         sortSelect.addEventListener('change', ()=>{
-            sortBy(taskObj, taskArr, taskName, sortSelect)
+            sortBy(taskArr, sortSelect)
         })
     }else{
         alert ('add your task')
@@ -133,7 +133,9 @@ addForm.addEventListener('submit', (e) =>{
         // editInput.addEventListener('blur', finish)
     }
     function sortBy (taskArr, sortSelect){
+
         switch(sortSelect.value){
+            
             case 'alfabet':
                 taskArr.sort((a, b) => a.textContent.trim().localeCompare(b.textContent.trim()));
                 break;
