@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/609a41c362.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>to-do list</h1>
+        <label for="options" class="sort">Sortuj:
+            <select id="options">
+                <option value="none">...</option>
+                <option value="alfabet">A...Z</option>
+                <option value="addTime">Czas dodania</option>
+                <option value="lenght">Długośc</option>
+            </select>
+        </label>
+    </header>
+    <main>
+        <div class="mainHeader">
+            <h2>aktywne zadania</h2>
+        </div>
+        <div class="mainBody">
+            <div class="actual">
+                <ul class="actualTask">
+                    
+                </ul>
+                <!-- EVERY SINGLE NOT COMPLETED TASK ELEMENT STRUCTURE IN <TEMPLATE> TAG -->
+                <template id="actualLiElement">
+                    <li>
+                        
+                        <div class="checkbox">
+                            <form action="">
+                                <label for="one" class="labelCheck">
+                                    <input type="checkbox" class="original" id="one">
+                                    <div class="custom"></div>
+                                    <p class="taskName">zadanie 1</p>
+                                </label>
+                            </form>
+                        </div>
+                        <!-- <input type="text" class="edit" placeholder="task name"> -->
+                        <div class="icons">
+                            <i class="fa-solid fa-eraser" id="deleteOne"></i>
+                            <i class="fa-regular fa-star" id="highlight"></i>
+                            <i class="fa-solid fa-pen-fancy" id="edit"></i>
+                        </div>
+                    </li>
+                </template>
+            </div>
+            <div class="completed">
+                <h2>zrobione zadania</h2>
+                <ul class="completedTask">
+                </ul>
+                <template id="completedLiElement">
+                <li>
+                    <p class="completedTaskName">Zrobione zadanie</p>
+                    <div class="icons">
+                        <i class="fa-solid fa-eraser" id="deleteOneCompleted"></i>
+                    </div>
+                </li>
+                </template>
+            </div>    
+        </div>
+        <div class="mainFooter">
+            <h3>Dodaj nowe zadanie:</h3>
+            <form class="add">
+                <input class="addInput" id="addInput" type="text" placeholder="Wpisz tytuł zadania">
+                <button class="addTask" id="addTask"><span>+</span></button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
